@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 6859 $ $Date:: 2017-05-05 #$ $Author: serge $
+// $Revision: 6912 $ $Date:: 2017-05-10 #$ $Author: serge $
 
 #ifndef LIB_DTMF_TOOLS_SERIALIZER_H
 #define LIB_DTMF_TOOLS_SERIALIZER_H

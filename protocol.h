@@ -1,8 +1,8 @@
 /*
 
-Serializer Export.
+Wrapper for APPG.
 
-Copyright (C) 2017 Sergey Kolevatov
+Copyright (C) 2020 Sergey Kolevatov
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,19 +19,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 6912 $ $Date:: 2017-05-10 #$ $Author: serge $
+// $Revision: 13385 $ $Date:: 2020-07-08 #$ $Author: serge $
 
-#ifndef LIB_DTMF_TOOLS_SERIALIZER_EXP_H
-#define LIB_DTMF_TOOLS_SERIALIZER_EXP_H
-
-#include <iostream>         // std::istream
-
-#include "dtmf_enum.h"      // dtmf_tools::tone_e
-
-namespace serializer
-{
-dtmf_tools::tone_e* load( std::istream & is, dtmf_tools::tone_e* e );
-bool save( std::ostream & os, const dtmf_tools::tone_e & e );
-}
-
-#endif // LIB_DTMF_TOOLS_SERIALIZER_EXP_H
+#include "dtmf_enum.h"          // tone_e
