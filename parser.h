@@ -24,6 +24,8 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #ifndef DTMF_TOOLS_PARSER_H
 #define DTMF_TOOLS_PARSER_H
 
+#include "generic_request/request.h"
+
 #include <string>               // std::string
 
 #include "dtmf_enum.h"          // tone_e
@@ -33,6 +35,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 NAMESPACE_DTMF_TOOLS_START
 
 tone_e               to_tone( const std::string & s );
+
+namespace parser
+{
+
+void get_value_or_throw( tone_e * res, const std::string & key, const generic_request::Request & r );
+
+}
 
 NAMESPACE_DTMF_TOOLS_END
 

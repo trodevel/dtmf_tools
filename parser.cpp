@@ -26,6 +26,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include <map>
 #include <stdexcept>                // std::invalid_argument
 
+#include "basic_parser/parser.h"
+#include "basic_parser/malformed_request.h"
+
 NAMESPACE_DTMF_TOOLS_START
 
 #define TUPLE_VAL_STR(_x_)  _x_,#_x_
@@ -69,5 +72,22 @@ tone_e to_tone( const std::string & s )
     return it->second;
 }
 
+
+namespace parser
+{
+
+using ::basic_parser::parser::get_value_or_throw;
+using ::basic_parser::parser::get_value_or_throw_t;
+
+void get_value_or_throw( tone_e * res, const std::string & key, const generic_request::Request & r )
+{
+    uint32_t res_i;
+
+    get_value_or_throw( & res_i, key, r );
+
+    * res = static_cast<tone_e>( res_i );
+}
+
+}
 
 NAMESPACE_DTMF_TOOLS_END
