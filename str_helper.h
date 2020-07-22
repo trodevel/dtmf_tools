@@ -19,9 +19,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 3352 $ $Date:: 2016-02-03 #$ $Author: serge $
+// $Revision: 13398 $ $Date:: 2020-07-23 #$ $Author: serge $
 
 #include <string>
+
+// system includes
+#include <sstream>
 
 #include "dtmf_enum.h"          // tone_e
 
@@ -30,5 +33,23 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 NAMESPACE_DTMF_TOOLS_START
 
 const std::string & to_string( const tone_e l );
+
+namespace str_helper
+{
+
+// enums
+std::ostream & write( std::ostream & os, const tone_e r );
+
+template<class T>
+std::string to_string( const T & l )
+{
+    std::ostringstream os;
+
+    write( os, l );
+
+    return os.str();
+}
+
+} // namespace str_helper
 
 NAMESPACE_DTMF_TOOLS_END
