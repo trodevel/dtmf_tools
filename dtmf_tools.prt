@@ -1,0 +1,19 @@
+protocol dtmf_tools
+enum tone_e
+    TONE_0 = 0
+    TONE_1 = 1
+    TONE_2 = 2
+    TONE_3 = 3
+    TONE_4 = 4
+    TONE_5 = 5
+    TONE_6 = 6
+    TONE_7 = 7
+    TONE_8 = 8
+    TONE_9 = 9
+    TONE_A = 10
+    TONE_B = 11
+    TONE_C = 12
+    TONE_E = 13
+    TONE_STAR = 14
+    TONE_HASH = 15
+enum_end
