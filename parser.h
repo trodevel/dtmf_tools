@@ -19,12 +19,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 13397 $ $Date:: 2020-07-23 #$ $Author: serge $
+// $Revision: 13519 $ $Date:: 2020-08-19 #$ $Author: serge $
 
 #ifndef DTMF_TOOLS_PARSER_H
 #define DTMF_TOOLS_PARSER_H
-
-#include "generic_request/request.h"
 
 #include <string>               // std::string
 
@@ -35,13 +33,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 NAMESPACE_DTMF_TOOLS_START
 
 tone_e               to_tone( const std::string & s );
-
-namespace parser
-{
-
-void get_value_or_throw( tone_e * res, const std::string & key, const generic_request::Request & r );
-
-}
 
 NAMESPACE_DTMF_TOOLS_END
 

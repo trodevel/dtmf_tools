@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 13398 $ $Date:: 2020-07-23 #$ $Author: serge $
+// $Revision: 13519 $ $Date:: 2020-08-19 #$ $Author: serge $
 
 #include "str_helper.h"             // self
 
@@ -65,19 +65,5 @@ const std::string & to_string( const tone_e l )
 
     return it->second;
 }
-
-namespace str_helper
-{
-
-// enums
-
-std::ostream & write( std::ostream & os, const tone_e r )
-{
-    os << dtmf_tools::to_string( r );
-
-    return os;
-}
-
-} // namespace str_helper
 
 NAMESPACE_DTMF_TOOLS_END
